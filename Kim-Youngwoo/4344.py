@@ -13,13 +13,13 @@ for i in range(1, len(var)) :
     
     testcase_avg = round((sum(testcase_list)-testcase_list[0])/testcase_list[0], 3)
     
-    for j in range(1,len(testcase_list)) :
-        count = 0
+    count = 0
 
+    for j in range(1,len(testcase_list)) :
+        
         if testcase_list[j] > testcase_avg :
             count = count + 1
 
-    print(count)        
-    # rate = (count/(len(testcase_list)-1))*100
+    rate = (count/(len(testcase_list)-1))*100
 
-    # print(f"{rate:.3f}%")
+    print(f"{rate:.3f}%")
