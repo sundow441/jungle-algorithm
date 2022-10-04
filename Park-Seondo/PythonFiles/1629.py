@@ -2,23 +2,19 @@ from sys import stdin
 
 stdin = open('inputfile.txt', 'r')
 n = stdin.read().splitlines()
-A = int(n[0].split()[0])
-B = int(n[0].split()[1])
-C = int(n[0].split()[2])
+Q = list(map(int, n[0].split()))
 ans = 1
-for i in range(B):
-    quotient = i
 
-def gobsem(a, b):
+def gobsem(a, b, c):
     global ans
-    while True:
-        if b == 1:
-            ans *= (a * b)
-        elif b > 1:
-            for i in b//2:
+    if b == 1:
+        ans = a % c
+        return ans
+    else:
+        ans = gobsem(a, b // 2, c)
+        if b % 2 == 0:
+            return (ans * ans) % c
+        else:
+            return (ans * ans * a) % c
 
-
-
-gobsem(A, B)
-print(ans, C)
-print(ans % C)
+print(gobsem(Q[0], Q[1], Q[2]))
