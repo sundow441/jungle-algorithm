@@ -30,10 +30,6 @@ def topologySort():
             chasu[i[0]] -= 1
             if chasu[i[0]] == 0:
                 queue.append(i[0])
-        
-        for i in bupum:
-            print(i)
-        print()
     for i in enumerate(bupum[N]):
         if i[1] > 0:
             print(*i)

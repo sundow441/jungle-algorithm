@@ -25,7 +25,7 @@ def Dijkstra(start):
         if gajungchi[start1] < gajung: # 시작점의 가중치가 현재 가중치보다 작으면 컨티뉴
             continue
         for nextNode, nextNodeGajung in graph[start1]: # 그래프에서 인접노드와 가중치 꺼내오기
-            totalGajung = gajung + nextNodeGajung # 가중치 총합 + 인접노드의 가중치
+            totalGajung = gajung + nextNodeGajung # 가중치 총합 = 현재 노드 가중치 + 인접노드의 가중치
             if gajungchi[nextNode] > totalGajung: # 인접노드 번째 가중치가 현재 가중치 총합보다 크면
                 gajungchi[nextNode] = totalGajung # 가중치 총합으로 변경
                 heappush(heap, [totalGajung, nextNode]) # 힙에 가중치 총합과 인접 노드를 저장

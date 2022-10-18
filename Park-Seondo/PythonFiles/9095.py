@@ -1,8 +1,9 @@
-import sys
+from sys import stdin
+stdin = open('inputfile.txt','r')
 
-sys.stdin = open('inputfile.txt','r')
-m = sys.stdin.read().splitlines()
-testcase = int(m[0])
-n = []
-for i in range(1, len(m)):
-    n.append(int(m[i]))
+T = int(stdin.readline())
+n = [int(stdin.readline()) for _ in range(T)]
+
+arr = [1, 2, 3]
+for i in n:
+    

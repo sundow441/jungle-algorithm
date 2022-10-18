@@ -11,7 +11,7 @@ for i in range(E):
 
 line.sort(key=lambda x:x[2]) #간선들을 가중치 순으로 정렬
 
-def find(x): 
+def find(x):
     if x != root[x]: #정점 x가 루트 리스트 안에 정렬되어 있지 않다면
         root[x] = find(root[x]) # 다시 검색
     return root[x] # root[x]를 반환(x)
