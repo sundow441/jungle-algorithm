@@ -30,7 +30,7 @@ smallStones = set()
 for _ in range(M):
     smallStones.add(int(stdin.readline().rstrip()))
 
-DP = [[10001] * int(((2 * N) ** 0.5) + 2) for i in range(N + 1)]
+DP = [[10001] * int(((2 * N) ** 0.5) + 2) for _ in range(N + 1)]
 DP[1][0] = 0
 
 for i in range(2, N + 1):
